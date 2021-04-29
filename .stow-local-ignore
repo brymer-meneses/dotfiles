@@ -1,4 +1,7 @@
+
 \.git 
 \.gitmodules
+\.gitignore
+\.scripts
 
-\.LICENSE
+^/.LICENSE.*
