@@ -1,0 +1,30 @@
+
+set default-bg "#3B4252"
+set adjust-open "best-fit"
+
+set recolor "true"
+set recolor-darkcolor "#ECEFF4"
+set recolor-lightcolor "#2E3440"
+set recolor-keephue "true"
+
+set guioptions none
+set highlight-color "#88C0D0"
+
+set page-padding 5
+#set window-title-basename "true"
+#set window-title-page "true"
+set window-title-home-tilde "true"
+
+set zoom-min 10
+map <C-=> zoom in
+map <C--> zoom out
+map <C-r> reload
+
+set font "Fira Code SemiBold 9"
+set inputbar-fg "#e5e9f0"
+set inputbar-bg "#4c566a"
+
+set statusbar-fg "#e5e9f0"
+set inputbar-bg "4c566a"
+
+
