@@ -1,8 +1,9 @@
 
-# 
-echo 'Installing Stow'
-git submodule update --remote --merge
 
+echo 'Installing dotfiles'
+
+# Updates the submodules
+git submodule update --recursive --remote
 
 stow --target "$HOME" 		       alacritty
 stow --target "$HOME" --no-folding VSCodium

@@ -2,3 +2,12 @@
 	path = nvim/.config/nvim
 	url = https://github.com/brymer-meneses/nvim
     branch = linux
+[submodule "gnome-themes/dot-extra-themes/argon-grub-theme"]
+	path = gnome-themes/dot-extra-themes/argon-grub-theme
+	url = https://github.com/stuarthayhurst/argon-grub-theme
+[submodule "gnome-themes/dot-extra-themes/mailspring-nord-theme"]
+	path = gnome-themes/dot-extra-themes/mailspring-nord-theme
+	url = https://github.com/faraadi/mailspring-nord-theme
+[submodule "gnome-themes/dot-extra-themes/nord-gnome-terminal"]
+	path = gnome-themes/dot-extra-themes/nord-gnome-terminal
+	url = https://github.com/arcticicestudio/nord-gnome-terminal
