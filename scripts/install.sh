@@ -1,7 +1,7 @@
 
 # 
 echo 'Installing Stow'
-git submodule update --init --recursive
+git submodule update --remote --merge
 
 
 stow --target "$HOME" 		       alacritty
