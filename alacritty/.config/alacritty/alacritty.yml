@@ -439,7 +439,7 @@ key_bindings:
   - { key: Home,      mods: Shift,   mode: ~Alt, action: ScrollToTop,   }
   - { key: End,       mods: Shift,   mode: ~Alt, action: ScrollToBottom }
   - { key: Space,  mods: Shift|Control, mode: Vi, action: ScrollToBottom          }
-  - { key: C,  mods: Control,                     action: ToggleViMode            }
+  - { key: C,  mods: Control|Shift,                     action: ToggleViMode            }
   - { key: Escape,                      mode: Vi, action: ClearSelection          }
   - { key: I,                           mode: Vi, action: ScrollToBottom          }
   - { key: I,                           mode: Vi, action: ToggleViMode            }
