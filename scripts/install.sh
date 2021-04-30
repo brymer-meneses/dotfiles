@@ -20,5 +20,6 @@ stow --target "$HOME" 	           spicetify
 
 stow --target "$HOME" 		   gnome-themes --dotfiles
 stow --target "$HOME"              config-files --dotfiles
+stow --target "$HOME" --no-folding ulancher
 
 echo 'Successfully installed dotfiles'
