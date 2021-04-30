@@ -13,10 +13,12 @@ fi
 git pull --recurse-submodules
 
 stow --target "$HOME" 		   alacritty
-stow --target "$HOME" --no-folding VSCodium
+stow --target "$HOME" --no-folding VSCodium     
 stow --target "$HOME" 		   nvim
 stow --target "$HOME" 	           zathura
 stow --target "$HOME" 	           spicetify
+
 stow --target "$HOME" 		   gnome-themes --dotfiles
+stow --target "$HOME"              config-files --dotfiles
 
 echo 'Successfully installed dotfiles'
