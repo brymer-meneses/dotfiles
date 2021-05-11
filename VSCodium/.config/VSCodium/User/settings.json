@@ -12,7 +12,7 @@
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.fontWeight": 600,
     "editor.fontLigatures" : true,
-    "workbench.iconTheme": "simple-icons",
+    "workbench.iconTheme": "minimalistic-icons",
     "latex-workshop.view.pdf.viewer": "tab",
     "[latex]": {
         "editor.defaultFormatter": "nickfode.latex-formatter"

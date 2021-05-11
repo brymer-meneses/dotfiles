@@ -144,4 +144,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
+alias manim="python3 -m manim"
+alias luarocks="/usr/local/bin/luarocks"
