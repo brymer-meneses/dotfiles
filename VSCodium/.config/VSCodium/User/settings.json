@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Nord Wave",
     "[json]": {
 
         "editor.quickSuggestions": {
@@ -30,5 +30,7 @@
     "workbench.enableExperiments": false,
     "notebook.kernelProviderAssociations": [
 
-    ], 
+    ],
+    "window.zoomLevel": 1,
+    
 }

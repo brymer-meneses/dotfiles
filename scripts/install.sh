@@ -12,14 +12,14 @@ fi
 # Updates the submodules
 git pull --recurse-submodules
 
-stow --target "$HOME" 		   alacritty
+stow --target "$HOME" 		       alacritty
 stow --target "$HOME" --no-folding VSCodium     
-stow --target "$HOME" 		   nvim
+stow --target "$HOME" 		       nvim
 stow --target "$HOME" 	           zathura
 stow --target "$HOME" 	           spicetify
-stow --target "$HOME" 		   kitty
+stow --target "$HOME" 		       kitty
 
-stow --target "$HOME" 		   gnome-themes --dotfiles
+stow --target "$HOME" 		       gnome-themes --dotfiles
 stow --target "$HOME"              config-files --dotfiles
 stow --target "$HOME" --no-folding ulauncher
 
