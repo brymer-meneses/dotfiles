@@ -31,8 +31,8 @@ fixed-center = true
 wm-restack = bspwm
 override-redirect = true
 border = 0
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 1
+module-margin-right = 1
 
 font-0 = FiraCode Nerd Font:size=10:antialias=true;3
 
@@ -40,20 +40,20 @@ font-0 = FiraCode Nerd Font:size=10:antialias=true;3
 inherit = bar/main
 width = 16%
 modules-center = bspwm
-offset-x = 12
+offset-x = 25
 
 
 [bar/time]
 inherit = bar/main
 width = 20%
-offset-x = 250
+offset-x = 260
 modules-center = time
 padding = 1
 
 [bar/system]
 inherit = bar/main
-offset-x = 900
-width = 32%
+offset-x = 930
+width = 30%
 module-margin-left = 1
 modules-center = pulseaudio pulseaudio-microphone backlight battery network
 
