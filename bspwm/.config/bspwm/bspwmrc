@@ -1,0 +1,34 @@
+#! /bin/sh
+
+nitrogen --restore
+# setup bspwm keybindings
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+# make multimedia keys work
+xbindkeys 
+
+picom &
+
+# launch polybar
+$HOME/.config/polybar/launch.sh
+
+bspc config top_padding 35
+
+bspc monitor -d I II III IV V
+
+bspc config border_width         4
+bspc config window_gap          25
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc config normal_border_color "#3B4252"
+bspc config active_border_color "#3B4252"
+bspc config focused_border_color "#717681"
+
+# Change pointer
+xsetroot -cursor_name left_ptr &
+
+
+

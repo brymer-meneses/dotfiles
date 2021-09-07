@@ -1,0 +1,238 @@
+
+; :set filetype=dosini
+[colors]
+polar-night-1 = #2E3440
+polar-night-2 = #3B4252
+polar-night-3 = #434C5E
+polar-night-4 = #4C566A
+
+snow-storm-1 = #D8DEE9
+snow-storm-2 = #E5E9F0
+snow-storm-3 = #ECEFF4
+
+frost-1 = #5E81AC
+frost-2 = #81A1C1
+frost-3 = #88C0D0
+frost-4 = #8FBCBB
+
+aurora-red = #BF616A
+aurora-orange = #D08770
+aurora-yellow = #EBCB8B
+aurora-green = #A3BE8C
+
+[bar/main]
+background = ${colors.polar-night-1}
+foreground = ${colors.snow-storm-1}
+bottom = false
+offset-y = 10
+height = 30
+; radius = 12
+fixed-center = true
+wm-restack = bspwm
+override-redirect = true
+border = 0
+; module-margin-left = 1
+; module-margin-right = 1
+
+font-0 = FiraCode Nerd Font:size=10:antialias=true;3
+
+[bar/workspaces]
+inherit = bar/main
+width = 16%
+modules-center = bspwm
+offset-x = 12
+
+
+[bar/time]
+inherit = bar/main
+width = 20%
+offset-x = 250
+modules-center = time
+padding = 1
+
+[bar/system]
+inherit = bar/main
+offset-x = 980
+width = 27%
+module-margin-left = 1
+modules-center = pulseaudio pulseaudio-microphone backlight battery network
+
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor睊
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
+
+[module/time]
+type = internal/date
+interval = 1
+date = %a, %d %B
+time = %I:%M %
+format-prefix = 
+format-prefix-foreground = ${colors.frost-2}
+format = <label>
+label = "  %date% | %time% "
+format-background = ${colors.polar-night-1}
+format-foreground = ${colors.snow-storm-1}
+
+[module/bspwm]
+type = internal/bspwm
+
+pin-workspaces = true
+enable-click = true
+enable-scroll = true
+
+format = <label-state>
+label-focused = 
+label-focused-background = ${colors.polar-night-1}
+label-focused-foreground = ${colors.frost-3}
+label-focused-padding = 2
+
+label-occupied = 
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-background = ${colors.aurora-red}
+label-urgent-padding = 2
+
+label-empty = 
+label-empty-foreground = ${colors.snow-storm-1}
+label-empty-padding = 2
+
+
+[module/battery]
+type = internal/battery
+battery = BAT1
+adapter = ADP1
+full-at = 100
+
+format-charging = <animation-charging>  <label-charging>
+
+format-discharging = <ramp-capacity>  <label-discharging>
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.aurora-green}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-3-foreground = ${colors.aurora-green}
+ramp-capacity-2-foreground = ${colors.aurora-green}
+ramp-capactiy-1-foreground = ${colors.aurora-orange}
+ramp-capacity-0-foreground = ${colors.aurora-red}
+ramp-capacity-foreground = ${colors.aurora-green}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.aurora-green}
+animation-charging-framerate = 1000
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+animation-discharging-foreground = ${colors.aurora-orange}
+animation-discharging-framerate = 1000
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = false
+interval = 5
+
+format-volume = <ramp-volume> <label-volume>
+label-muted =   muted
+label-muted-foreground = ${colors.polar-night-4}
+ramp-volume-0 = 
+ramp-volume-1 = 墳
+ramp-volume-2 = 
+ramp-volume-foreground = ${colors.frost-3}
+
+; Right and Middle click
+click-right = pavucontrol
+
+[module/pulseaudio-microphone]
+type = custom/script
+exec = ~/.config/polybar/scripts/microphone.sh
+tail = true
+click-left = ~/.config/polybar/scripts/microphone.sh --toggle &
+scroll-up = ~/.config/polybar/scripts/microphone.sh --increase &
+scroll-down = ~/.config/polybar/scripts/microphone.sh --decrease &
+
+format =  <label>
+format-foreground = ${colors.frost-2}
+label = %output%
+label-foreground = ${colors.snow-storm-1}
+
+
+[module/backlight]
+type = internal/backlight
+
+card = amdgpu_bl1
+
+use-actual-brightness = true
+
+format = <ramp> <label>
+
+label = %percentage%%
+
+enable-scroll = true
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-5 = 
+ramp-6 = 
+
+ramp-foreground = ${colors.aurora-yellow}
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+
+interval = 3.0
+
+accumulate-stats = true
+
+; Available tags:
+;   <label-connected> (default)
+;   <ramp-signal>
+format-connected = <label-connected>
+
+; Available tags:
+;   <label-disconnected> (default)
+format-disconnected = <label-disconnected>
+
+format-packetloss = <animation-packetloss> <label-connected>
+
+; Default: %ifname% %local_ip%
+label-connected =   %essid% 
+label-connected-foreground = ${colors.frost-4}
+
+; Default: (none)
+label-disconnected = 睊
+label-disconnected-foreground = ${colors.aurora-red}
+
+;label-packetloss = %essid%
+; Default: (none)
+;label-packetloss-foreground = #eefafafa
+
+click-right = nm-connection-editor
+
+
+
