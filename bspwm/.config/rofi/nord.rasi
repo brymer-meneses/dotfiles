@@ -2,8 +2,7 @@
     bg-color            : #2e3440;
     bg-light-color      : #3b4252;
     fg-color            : #d8dee9;
-    fg-selected-color   : #3b4252;
-    accent-color        : #88c0d0;
+    accent-color        : #4c566a;
     urgent-color        : #ebcb8b;
 
     background-color    : @bg-color;
@@ -54,7 +53,7 @@
     spacing             : 8;
 }
 #element normal normal {
-    text-color          : @fg-selected-color;
+    text-color          : @fg-color;
 }
 #element normal urgent {
     text-color          : @urgent-color;
