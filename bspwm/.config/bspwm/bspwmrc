@@ -27,8 +27,11 @@ bspc config normal_border_color "#3B4252"
 bspc config active_border_color "#3B4252"
 bspc config focused_border_color "#717681"
 
-# Change pointer
+# Change poinher
 xsetroot -cursor_name left_ptr &
 
-
-
+TOUCHPAD="SYNA3255:00 06CB:7F27 Touchpad"
+# Double tap as right click
+xinput set-prop "${TOUCHPAD}" "libinput Tapping Enabled" 1
+# Natural Scrolling
+xinput set-prop "${TOUCHPAD}" "libinput Natural Scrolling Enabled" 1

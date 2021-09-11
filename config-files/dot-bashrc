@@ -151,4 +151,8 @@ alias luarocks="/usr/local/bin/luarocks"
 # :q() { exit; }
 
 alias :q=exit
+export JDTLS_HOME=~/.local/share/jdtls
 
+export WORKSPACE=~/workspaces/java # Def
+
+eval "$(direnv hook bash)"
