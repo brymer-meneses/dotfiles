@@ -117,18 +117,6 @@ if ! shopt -oq posix; then
 fi
 #source "$HOME/.cargo/env"
 
-eval "$(starship init bash)"
-
-export PATH="~/anaconda3/bin:$PATH"
-
-export PATH="$PATH:~/.local/share/flutter/bin"
-export PATH="$PATH:~/.local/share/vcpkg/vcpkg"
-
-# FIX ADB Error
-alias adb='~/Android/Sdk/platform-tools/adb' 
-
-export SPICETIFY_INSTALL="/home/brymer-meneses/spicetify-cli"
-export PATH="$SPICETIFY_INSTALL:$PATH"
 
 
 # >>> conda initialize >>>
@@ -145,14 +133,12 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-alias manim="python3 -m manim"
 alias luarocks="/usr/local/bin/luarocks"
 
-# :q() { exit; }
 
 alias :q=exit
-export JDTLS_HOME=~/.local/share/jdtls
 
-export WORKSPACE=~/workspaces/java # Def
 
+eval "$(starship init bash)"
 eval "$(direnv hook bash)"
+pfetch
